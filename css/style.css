@@ -283,4 +283,33 @@ body{
 .player{
   height: 90px;
   background-color: #282828;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.now-playing{
+  height: 50%;
+  display: flex;
+  align-items: center;
+}
+.now-playing img{
+  height: 100%;
+  padding-left: 10px;
+  padding-right: 20px;
+}
+.now-playing .text{
+  padding-right: 30px;
+}
+.now-playing .text h2{
+  font-size: 17px;
+  color: white;
+}
+.now-playing .text h3{
+  font-size: 15px;
+  color: gray;
+}
+.now-playing span{
+  display: block;
+  font-size: 20px;
+  padding: 10px;
 }
