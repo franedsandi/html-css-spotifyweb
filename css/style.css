@@ -32,6 +32,10 @@ body{
   width: 60%;
   padding-left: 20px;
 }
+.minilogo{
+  display: none;
+  padding: 7px;
+}
 .side-nav{
   height: 135px;
   width: 100%;
@@ -57,13 +61,33 @@ body{
   
 }
 .side-nav .active{
-  border-left: 5px solid #ADFF2F;
-  padding: 10px 0px 10px 15px;
+  padding: 10px;
   color: white;
   font-weight: bold;
+  position: relative;
+}
+.side-nav .active::after {
+  position: absolute;
+  content: "";
+  height: 40px;
+  background-color: greenyellow;
+  width: 4px;
+  bottom:0;
+  left:0;
+
+}
+.side-nav .normal :hover::after {
+  position: absolute;
+  content: "";
+  height: 40px;
+  background-color: greenyellow;
+  width: 4px;
+  bottom:0;
+  left:0;
 }
 .side-nav .normal{
-  padding: 10px 0px 10px 20px;
+  padding: 10px;
+  position: relative;
 }
 .playlists{
   width: 100%;
@@ -227,7 +251,7 @@ body{
   width: 40px;
   bottom: -10px;
   left:50%;
-  transform: translate(-50%);
+  transform: translate(-50% , 0%);
   
 }
 .music-display ul li:hover ::after {
@@ -238,7 +262,7 @@ body{
   width: 40px;
   bottom: -10px;
   left:50%;
-  transform: translate(-50%);
+  transform: translate(-50% , 0%);
 }
 
 .music-display .container{
@@ -251,32 +275,50 @@ body{
   color: grey;
 }
 .music-display .cards{
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
   gap:20px;
+  justify-content:stretch;
+  padding-top: 30px;
 }
 .music-display .card{
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 30px 0px 0px;
-  width: 12.8vw;
+  max-width: calc( (100vw - 225px) / 6 - 27px);
   min-width: 200px;
   text-align: center;
 }
-.music-display .card img{
-  width: 12.8vw;
-  height: 12.8vw;
-  min-width: 200px;
-  min-height: 200px;
+.music-display .imagen{
+  position: relative;
 }
+.music-display .card img{
+  width: 100%;
+}
+
+.music-display .card .imagen .play{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: calc( (100vw - 225px) / 6 - 27px) ;
+  width: calc( (100vw - 225px) / 6 - 27px) ;
+  font-size: 30px;
+  position: absolute;
+  top: 0;
+  opacity: 0;
+}
+
+
+.music-display .card .imagen .play:hover{
+  background-color: rgba(0, 0, 0, .5);
+  opacity: 1;
+}
+
 .music-display .card:hover{
   cursor: pointer;
 }
-.music-display .card:hover img {
-  opacity: 0.3;
-  display: block;
-}
+
 .music-display .card h2{
   padding: 20px 0px;
 }
@@ -319,4 +361,27 @@ body{
   display: block;
   font-size: 20px;
   padding: 10px;
+}
+@media screen and (max-width:576px) {
+  .sidebar{
+    width: 45px;
+  }
+  .mainbar{
+    width: calc(100% - 45px);
+  }
+  .transparent{
+    width:calc(100% - 45px);
+  }
+  .logo{
+    display: none;
+  }
+  .minilogo{
+    display: block;
+  }
+  .playlists{
+    display: none;
+  }
+  .card{
+    min-width: calc(100% /2 - 20px);
+  }
 }
