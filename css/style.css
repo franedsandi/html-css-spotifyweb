@@ -4,8 +4,31 @@
   box-sizing: border-box;
   font-family: 'Montserrat', sans-serif;
 }
-.top{
+/* width 100% */
+.music-display .card img,
+.playing,
+.playing .bot .big-bar {
   width: 100%;
+}
+/* color white */
+.side-nav ul li a:hover,
+.side-nav .active,
+.playlist,
+.add-playlist a:hover,
+.saved-playlists ul li a:hover,
+.app .user a,
+.transparent .button a:hover,
+.music-display .container,
+.now-playing .text h2,
+.playing .top,
+.playing .bot,
+.playing .top ul a:hover,
+.player span:hover,
+.player .level .ball:hover
+{
+  color:white
+}
+.top{
   height: calc(100vh - 80px);
   display: flex;
 }
@@ -17,7 +40,6 @@
 }
 .logo{
   height: 90px;
-  width: 100%;
   display: flex;
   object-fit: contain;
   align-items: center;
@@ -33,7 +55,6 @@
 }
 .side-nav{
   height: 135px;
-  width: 100%;
 }
 .side-nav ul li {
   height: calc(135px / 3);
@@ -46,7 +67,6 @@
   text-decoration: none;
 }
 .side-nav ul li a:hover{
-  color: white;
   font-weight: bold;
 }
 .side-nav ul li img{
@@ -55,7 +75,6 @@
 }
 .side-nav .active{
   padding: 10px;
-  color: white;
   font-weight: bold;
   position: relative;
 }
@@ -82,23 +101,18 @@
   position: relative;
 }
 .playlists{
-  width: 100%;
   min-height: 250px;
   height: calc(100% - 180px - 135px);
 }
-
 .playlist{
-  width: 100%;
   height: 30px;
   padding-left: 20px;
   font-weight: bold;
-  color: white;
   display: flex;
   align-items: center;
 }
 .add-playlist{
   height: 90px;
-  width: 100%;
   display: flex;
   align-items: center;
   padding-left: 20px;
@@ -110,16 +124,12 @@
   text-decoration: none;
   font-weight: bold;
 }
-.add-playlist a:hover{
-  color: white;
-}
 .add-playlist i{
   font-size: 50px;
   padding-right: 10px;
 }
 .saved-playlists{
   height: calc(100% - 30px - 90px);
-  width: 100%;
   overflow-y: auto;
   padding-left: 20px;
   min-height: 100px;
@@ -135,12 +145,8 @@
   color: gray;
   text-decoration: none;
 }
-.saved-playlists ul li a:hover{
-  color: white;
-}
 .app{
   height: 90px;
-  width: 100%;
   padding: 0px 20px;
 }
 .app span{
@@ -164,7 +170,6 @@
 .app .user a{
   height: 45px;
   text-decoration: none;
-  color: white;
   display: flex;
   align-items: center;
   font-weight: 700;
@@ -200,19 +205,16 @@
   border-radius: 50px;
 }
 .transparent .button a:hover{
-  color: white;
   cursor: pointer;
   border-color: white;
 }
 .music-display{
-  width: 100%;
   height: 100%;
   overflow: auto;
   padding-top: 90px;
 }
 .music-display nav{
   padding: 15px;
-  width: 100%;
   font-size: 10px;
 }
 .music-display nav ul{
@@ -257,14 +259,12 @@
 .music-display .container{
   width:100%;
   padding: 25px 20px 0px;
-  color: white;
 }
 .music-display .container p{
   padding: 10px 0px 20px;
   color: grey;
 }
 .music-display .cards{
-  width: 100%;
   display: flex;
   flex-wrap: wrap;
   gap:20px;
@@ -281,9 +281,6 @@
 }
 .music-display .imagen{
   position: relative;
-}
-.music-display .card img{
-  width: 100%;
 }
 .music-display .card .imagen .play{
   display: flex;
@@ -334,14 +331,12 @@
 .now-playing img{
   height: 100%;
   padding: 20px 10px 20px ;
-
 }
 .now-playing .text{
   padding-right: 10px;
 }
 .now-playing .text h2{
   font-size: 13px;
-  color: white;
 }
 .now-playing .text h3{
   font-size: 7px;
@@ -349,16 +344,13 @@
 }
 .playing{
   height: 100%;
-  width: 100%;
 }
 .playing .top,
 .playing .bot{
-  width: 100%;
   height: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: white;
 }
 .player .icons{
   display: flex;
@@ -380,12 +372,8 @@
 .playing .top ul li:nth-child(3){
   font-size: 25px;
 }
-.playing .top ul a:hover{
-  color: white
-}
 .playing .bot .big-bar{
 height: 3px;
-width: 100%;
 max-width: 400px;
 background-color: grey;
 position: relative;
@@ -394,9 +382,6 @@ position: relative;
   display: block;
   font-size: 10px;
   padding: 3px;
-}
-.player span:hover{
-  color: white;
 }
 .player .vol{
   height: 100%;
@@ -430,7 +415,6 @@ position: relative;
 }
 .player .level .ball:hover{
   opacity: 1;
-  color: white;
 }
 @media screen and (max-width:992px) {
   .music-display .card{
