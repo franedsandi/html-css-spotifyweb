@@ -14,7 +14,7 @@
   <title>Spotify</title>
 </head>
 <!-- todo
-    -playbar design (mid and bot) + media query those areas -->
+    -clean css code, use root-->
 <body>
   <main>
     <div class="top ">
@@ -224,16 +224,48 @@
           <h2>Sinister</h2>
           <h3>Brano Nome</h3>
         </div>
-        <span><i class="fa-regular fa-heart"></i></span>
-        <span><i class="fa-regular fa-folder"></i></span>
+        <div class="icons">
+          <span><i class="fa-regular fa-heart"></i></span>
+          <span><i class="fa-regular fa-folder"></i></span>
+        </div>
+        
       </div>
-      <div class="reproduciendo">
-        seee meeeeee
+      <div class="playing">
+        <div class="top">
+          <ul>
+            <li><a href="#"><i class="fa-solid fa-shuffle"></i></a></li>
+            <li><a href="#"><i class="fa-solid fa-backward-step"></i></a></li>
+            <li><a href="#"><i class="fa-regular fa-circle-play"></i></a></li>
+            <li><a href="#"><i class="fa-solid fa-forward-step"></i></a></li>
+            <li><a href="#"><i class="fa-solid fa-rotate-right"></i></a></li>
+          </ul>
+        </div>
+        <div class="bot">
+          <span>0:25</span>
+          <div class="big-bar">
+            <div class="level">
+              <div class="ball">
+                <p><i class="fa-solid fa-circle-dot"></i></p>
+              </div>
+            </div>
+          </div>
+          <span>4:35</span>
+        </div>
       </div>
-      <div class="volumen">
-        seee meeeeee
+      <div class="vol">
+        <div class="icons">
+          <span><i class="fa-solid fa-list"></i></span>
+          <span><i class="fa-solid fa-display"></i></span>
+          <span><i class="fa-solid fa-volume-high"></i></span>
+        </div>
+        <div class="bar">
+          <div class="level">
+            <div class="ball">            
+              <p><i class="fa-solid fa-circle-dot"></i></p>
+            </div>
+          </div>
+        </div>
       </div>
-
     </div>
   </main>
 </body>
