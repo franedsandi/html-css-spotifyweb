@@ -36,7 +36,7 @@ a {
 .playing .top,
 .playing .bot,
 .playing .top ul a:hover,
-.player span:hover,
+.player a:hover,
 .player .level .ball:hover {
   color:white
 }
@@ -311,6 +311,9 @@ a {
   justify-content: space-between;
   font-size: 17px;
 }
+.playing .top ul :hover{
+  scale: 1.1;
+}
 .playing .top ul li:nth-child(3) {
   font-size: 25px;
 }
@@ -319,6 +322,9 @@ a {
   max-width: 400px;
   background-color: grey;
   position: relative;
+}
+.player a {
+  padding: 3px;
 }
 .player span {
   font-size: 10px;
@@ -346,13 +352,15 @@ a {
   top: 50%;
   left: 30%;
   transform: translate(-50% , -50%);
-  opacity: 0;
+  display: none;
 }
-.player .level:hover {
+.player .big-bar:hover .level,
+.player .bar:hover .level {
   background-color: greenyellow;
 }
-.player .level .ball:hover {
-  opacity: 1;
+.player .big-bar:hover .ball,
+.player .bar:hover .ball{
+  display: block;
 }
 @media screen and (max-width:992px) {
   .music-display .card {
